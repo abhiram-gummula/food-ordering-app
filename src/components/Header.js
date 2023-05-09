@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Title = () => {
   return (
-    <a href="/">
+    <Link to="/">
       <img className="app-logo" alt="app-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Y4M74UH-DIE2aUFwmbjTLe84IGdLbSPeac3LK7JmTkHcaGWJ9LasRX7MPnB3ntqH2IU" />
-    </a>
+    </Link>
   )
 }
 
@@ -19,9 +20,9 @@ const Header = () => {
       <Title />  
       <div className="nav-items">
         < ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
           <li>Cart</li>
         </ul>
       </div>
