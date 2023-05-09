@@ -10,6 +10,7 @@ import RestaurantCard from "./RestaurantCard.js";
 import { IMG_CDN_URL } from "../config.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./RestaurantMenu.js";
+import Profile from "./Profile.js";
 
 
 /* App Layout - 
@@ -59,7 +60,13 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />
+        element: <About />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile />
+          }
+        ]
       },
       {
         path: "/contact",
