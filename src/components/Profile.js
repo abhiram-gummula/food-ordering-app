@@ -1,7 +1,7 @@
 const Profile = () => {
   return (
     <div>
-      <h2>Profile Component</h2>
+      <h2>This is a Functional Profile Component</h2>
     </div>
   )
 };

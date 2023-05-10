@@ -11,29 +11,7 @@ import { IMG_CDN_URL } from "../config.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./RestaurantMenu.js";
 import Profile from "./Profile.js";
-
-
-/* App Layout - 
-Header
-  Logo
-  Nav Items
-    Home
-    About Us
-    Contact Us
-  Cart
-Body
-  Searchbar
-  RestaurantList
-    RestaurantCard
-      Image
-      Name
-      Cuisines
-      Distance
-Footer
-  Links
-  Copyright
-*/
-
+import ProfileClass from "./ProfileClass.js";
 
 
 
@@ -64,7 +42,7 @@ const appRouter = createBrowserRouter([
         children: [
           {
             path: "profile",
-            element: <Profile />
+            element: <ProfileClass name="Chris" />
           }
         ]
       },
@@ -73,7 +51,7 @@ const appRouter = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: "/restaurant/:id",
+        path: "/restaurant/:resId",
         element: <RestaurantMenu />
       }
 
