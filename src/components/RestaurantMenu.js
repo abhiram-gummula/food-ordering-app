@@ -22,10 +22,10 @@ const RestaurantMenu = () => {
         <h2>Cost for two - {restaurant.costForTwoMessage}</h2>
       </div>
       <div>
-        <h1>Menu - Item Category Cards</h1>
-        {menu && (<ul>
-          <h2>{menu.map((array) =>array.map((obj) => <li>{obj.card.info.name}</li>))}</h2>
-        </ul>)}
+        <h1>Menu - Recommended Items</h1>
+        <ul>
+          {menu.map((item)=>{return <li key={item.id}>{item?.name}</li>})}
+        </ul>
         
       </div>
     </div>
@@ -34,3 +34,5 @@ const RestaurantMenu = () => {
 }
 
 export default RestaurantMenu;
+
+// menu.map((array) =>array.map((obj) => <li key={obj?.card?.info?.id}>{obj?.card?.info?.name

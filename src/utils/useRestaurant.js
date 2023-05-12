@@ -14,10 +14,13 @@ const useRestaurant = (resId) => {
     const json = await data.json();
     setRestaurant(json?.data?.cards[0]?.card?.card?.info);
 
-    // Assuming the data is stored in a variable called 'json'
-    const itemCategoryCards = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(card => card?.card?.card["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory").map(card=>card?.card?.card?.itemCards);
+    const items = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(card=>card.card.card.title==="Recommended")[0]?.card?.card?.itemCards.map((itemCard)=>{return itemCard?.card?.info})
 
-    setMenu(itemCategoryCards);
+    console.log(items);
+
+    // const items = (json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards).map((itemCard)=>{return itemCard?.card?.info})
+
+    setMenu(items);
 }
 return {restaurant, menu};
 }

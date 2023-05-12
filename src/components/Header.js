@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Title = () => {
   return (
     <Link to="/">
-      <img className="app-logo" alt="app-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Y4M74UH-DIE2aUFwmbjTLe84IGdLbSPeac3LK7JmTkHcaGWJ9LasRX7MPnB3ntqH2IU" />
+      <img className="h-28 p-2" alt="app-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Y4M74UH-DIE2aUFwmbjTLe84IGdLbSPeac3LK7JmTkHcaGWJ9LasRX7MPnB3ntqH2IU" />
     </Link>
   )
 }
@@ -16,14 +16,15 @@ const Header = () => {
 
   return (
     
-    <div className="header">
+    <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 md:bg-yellow-50">
       <Title />  
       <div className="nav-items">
-        < ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li>Cart</li>
+        < ul className="flex py-10">
+          <li className="px-2"><Link to="/">Home</Link></li>
+          <li className="px-2"><Link to="/about">About Us</Link></li>
+          <li className="px-2"><Link to="/contact">Contact Us</Link></li>
+          <li className="px-2"><Link to="/instamart">Instamart</Link></li>
+          <li className="px-2">Cart</li>
         </ul>
       </div>
       {isLoggedIn?
