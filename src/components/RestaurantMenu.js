@@ -2,15 +2,23 @@ import {useParams} from "react-router-dom"
 import { IMG_CDN_URL } from "../config";
 import Shimmer from "./Shimmer";
 import useRestaurant from "../utils/useRestaurant";
+import { addItem } from "../utils/cartSlice"
+import { useDispatch } from "react-redux";
 
 const RestaurantMenu = () => {
 
   const {resId} = useParams();
   const {restaurant, menu} = useRestaurant(resId);
 
+  const dispatch = useDispatch();
+
+  const addFoodItem = (item) => {
+    dispatch(addItem(item));
+  }
+
   
   return !restaurant || !menu ? <Shimmer /> : (
-    <div className="restaurant-details">
+    <div className="flex">
       <div>
         <h1>Restaurant ID: {resId}</h1>
         <h2>Name - {restaurant.name}</h2>
@@ -21,10 +29,10 @@ const RestaurantMenu = () => {
         <h2>Rating - {restaurant.avgRating}</h2>
         <h2>Cost for two - {restaurant.costForTwoMessage}</h2>
       </div>
-      <div>
+      <div className="p-5">
         <h1>Menu - Recommended Items</h1>
         <ul>
-          {menu.map((item)=>{return <li key={item.id}>{item?.name}</li>})}
+          {menu.map((item)=>{return <li key={item.id}>{item?.name} - <button className="p-1 bg-green-50" onClick={()=>{addFoodItem(item.name);}}>Add</button></li>})}
         </ul>
         
       </div>

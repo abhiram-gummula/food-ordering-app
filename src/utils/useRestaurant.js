@@ -16,7 +16,6 @@ const useRestaurant = (resId) => {
 
     const items = json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(card=>card.card.card.title==="Recommended")[0]?.card?.card?.itemCards.map((itemCard)=>{return itemCard?.card?.info})
 
-    console.log(items);
 
     // const items = (json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards).map((itemCard)=>{return itemCard?.card?.info})
 

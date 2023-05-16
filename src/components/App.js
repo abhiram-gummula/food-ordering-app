@@ -12,17 +12,19 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./RestaurantMenu.js";
 import Profile from "./Profile.js";
 import ProfileClass from "./ProfileClass.js";
-// import Instamart from "./Instamart.js";
+import { Provider } from "react-redux";
+import store from "../utils/store.js";
+import Cart from "./Cart.js";
 
 const Instamart = lazy(()=>import("./Instamart.js"))
 
 const AppLayout = () => {
   return (
-    <>
-    <Header />
-    <Outlet />
-    <Footer />
-    </>
+    <Provider store={store}>
+      <Header />
+      <Outlet />
+      <Footer />
+    </Provider>
   )
 }
 
@@ -50,6 +52,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />
+      },
+      {
+        path: "/cart",
+        element: <Cart />
       },
       {
         path: "/instamart",
