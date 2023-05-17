@@ -12,7 +12,7 @@ const Cart = () => {
         <h1 className="font-bold text-3xl">Cart Items - {cartItems.length}</h1>
         <button className="bg-green-100 p-2 m-5" onClick={()=>{handleClearCart();}}>Clear Cart</button>
       <div>
-        {cartItems.map((item)=>{return <ul key={item}><l1>{item}</l1></ul>})}
+        <ul>{cartItems.map((item)=>{return <li key={item.id}>{item.name} - {item.price/100} Rupees</li>})}</ul>
       </div>
     </div>
   )

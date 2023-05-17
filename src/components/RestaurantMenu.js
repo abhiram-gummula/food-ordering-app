@@ -30,9 +30,9 @@ const RestaurantMenu = () => {
         <h2>Cost for two - {restaurant.costForTwoMessage}</h2>
       </div>
       <div className="p-5">
-        <h1>Menu - Recommended Items</h1>
+        <h1>Menu - All Items</h1>
         <ul>
-          {menu.map((item)=>{return <li key={item.id}>{item?.name} - <button className="p-1 bg-green-50" onClick={()=>{addFoodItem(item.name);}}>Add</button></li>})}
+          {menu.map((item)=>{return <li key={item.id}>{item?.name} - <button className="p-1 bg-green-50" onClick={()=>{addFoodItem(item);}}>Add</button></li>})}
         </ul>
         
       </div>
