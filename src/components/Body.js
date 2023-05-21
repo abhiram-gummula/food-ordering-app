@@ -45,6 +45,7 @@ const isOnline = useOnline();
         setSearchText(e.target.value);
         }} />
       <button 
+      data-testid="search-btn"
       className="p-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-md"
       onClick= {()=>{
         const data = filterData(searchText, allRestaurants);
@@ -52,7 +53,7 @@ const isOnline = useOnline();
       }}
       >Search</button>
     </div>
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap" data-testid="res-list">
        
       {
       filteredRestaurants.length===0?<h1>No restaurants found. Please try again</h1>:

@@ -35,13 +35,13 @@ const Header = () => {
           <li className="px-2"><Link to="/about">About Us</Link></li>
           <li className="px-2"><Link to="/contact">Contact Us</Link></li>
           <li className="px-2"><Link to="/instamart">Instamart</Link></li>
-          <li className="px-2"><Link to="/cart">Cart - {cartItems.length} items</Link></li>
+          <li className="px-2"><Link to="/cart" data-testid="cart">Cart - {cartItems.length} items</Link></li>
         </ul>
       </div>
-      <div className="m-10">{isOnline?"✅":"🛑"}</div>
+      <div className="m-10" data-testid="online-status">{isOnline?"✅":"🛑"}</div>
       <h1 className="p-10 font-bold text-red-900">{user.name}</h1>
       {isLoggedIn?
-      (<button onClick={()=>{setIsLoggedIn(false)}}>{user.name}Logout</button>):
+      (<button onClick={()=>{setIsLoggedIn(false)}}>Logout</button>):
       (<button onClick={()=>{setIsLoggedIn(true)}}>Login</button>)
       }
     </div>
