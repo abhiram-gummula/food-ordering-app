@@ -1,5 +1,5 @@
 {
-  "name": "react-project",
+  "name": "food-ordering-app",
   "version": "1.0.0",
   "description": "I am learning React",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhiram-gummula/react-course.git"
+    "url": "git+https://github.com/abhiram-gummula/food-ordering-app"
   },
   "author": "Abhiram Gummula",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/abhiram-gummula/react-course/issues"
+    "url": "https://github.com/abhiram-gummula/food-ordering-app/issues"
   },
-  "homepage": "https://github.com/abhiram-gummula/react-course#readme",
+  "homepage": "https://abhiram-gummula.github.io/food-ordering-app",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
