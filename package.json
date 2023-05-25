@@ -5,9 +5,9 @@
   "description": "I am learning React",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --out-dir dist",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy":"gh-pages -d dist",
+    "build": "parcel build index.html",
     "test": "jest",
     "watch-test": "jest --watch",
     "eject": "react-scripts eject"
