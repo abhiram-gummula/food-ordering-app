@@ -1,4 +1,5 @@
 {
+  "homepage": "https://abhiram-gummula.github.io/food-ordering-app",
   "name": "food-ordering-app",
   "version": "1.0.0",
   "description": "I am learning React",
@@ -6,7 +7,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "test": "jest",
     "watch-test": "jest --watch",
     "eject": "react-scripts eject"
@@ -20,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/abhiram-gummula/food-ordering-app/issues"
   },
-  "homepage": "https://abhiram-gummula.github.io/food-ordering-app",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
